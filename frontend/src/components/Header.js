@@ -33,7 +33,7 @@ const Header = () => {
         <img src={h2} alt='' />
         <div className='headerbgtwo-text'>
           <span className='flag'> 🇸🇳</span>
-          <h3>Découvrez l'Excellence des Poulets de Qualité Supérieure! </h3>
+          <h3>Découvrez l'Excellence des Poulets de Qualité Supérieure!Chez Mame Doussou Camara G I E </h3>
         </div>
       </div>
     </div>

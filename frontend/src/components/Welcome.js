@@ -1,5 +1,4 @@
 import React from 'react'
-import w2 from "../assets/welcometest.png"
 const Welcome = () => {
   return (
     <div className='welcome'>
@@ -30,7 +29,7 @@ const Welcome = () => {
         <div className='welcome-last-details'>
           <p>
             Toutes nos poules pondeuses sont élevées dans nos bâtiments
-            d'élevage basés dans la Drôme (26), au plus près de chez vous. Nous
+            d'élevage basés à Tivaoune Peulh, au plus près de chez vous. Nous
             attachons une importance particulière à la qualité de vie de nos
             volailles, afin de garantir un produit sain et naturel pour nos
             clients.
