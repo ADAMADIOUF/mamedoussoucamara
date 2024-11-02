@@ -10,7 +10,7 @@ const products = [
     age: '6 mois',
     weight: '1.5 kg',
     price: 15.99,
-    category: 'Poulet',
+    category: 'poules-pondeuses',
   },
   {
     id: 2,
@@ -22,19 +22,19 @@ const products = [
     age: '8 mois',
     weight: '2 kg',
     price: 19.99,
-    category: 'Canard',
+    category: 'poulets-pintades',
   },
   {
     id: 3,
     image:
       'https://i.pinimg.com/236x/32/33/78/323378cbd2582db703931f10cc6dd8e5.jpg',
-    title: 'Pigeons de Ferme',
+    title: 'volailles-festives',
     description:
       'Pigeons de qualité supérieure, élevés pour une saveur délicate.',
     age: '5 mois',
     weight: '0.5 kg',
     price: 12.99,
-    category: 'Pigeon',
+    category: 'volailles-festives',
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const products = [
     age: '7 mois',
     weight: '1.8 kg',
     price: 16.99,
-    category: 'Lapin',
+    category: 'volailles-festives',
   },
   {
     id: 5,
@@ -59,6 +59,42 @@ const products = [
     weight: '1 kg',
     price: 14.99,
     category: 'Autre Volaille',
+  },
+  {
+    id: 6,
+    image:
+      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+    title: 'Poulet Fermier de Qualité',
+    description:
+      'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',
+    age: '6 mois',
+    weight: '1.5 kg',
+    price: 15.99,
+    category: 'poules-pondeuses',
+  },
+  {
+    id: 7,
+    image:
+      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+    title: 'Poulet Fermier de Qualité',
+    description:
+      'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',
+    age: '6 mois',
+    weight: '1.5 kg',
+    price: 15.99,
+    category: 'poules-pondeuses',
+  },
+  {
+    id: 8,
+    image:
+      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+    title: 'Poulet Fermier de Qualité',
+    description:
+      'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',
+    age: '6 mois',
+    weight: '1.5 kg',
+    price: 15.99,
+    category: 'poules-pondeuses',
   },
 ]
 

@@ -13,12 +13,12 @@ const Categories = () => {
              <img src={image} alt='' />
            </div>
            <h3>{title}</h3>
-           <button className='btn-categories'>
-             decouvrir
-             <span>
-               <FaArrowAltCircleRight />
-             </span>
-           </button>
+            <div className='details-link-categories'>
+           <button className='btn-categories'>decouvrir</button>
+           <span>
+             <FaArrowAltCircleRight />
+           </span>
+           </div>
          </div>
        )
       })}
