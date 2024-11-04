@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { Link } from 'react-router-dom' // Import Link from react-router-dom
+import { Link } from 'react-router-dom'
 import navbarData from '../datanav'
 
 const Navbar = () => {
@@ -9,15 +9,16 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-    setActiveSubMenu(null)
+    setActiveSubMenu(null) // Close all submenus when toggling mobile menu
   }
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
-    setActiveSubMenu(null)
+    setActiveSubMenu(null) // Close all submenus
   }
 
   const toggleSubMenu = (menuId) => {
+    // Close any active submenu before opening the new one
     setActiveSubMenu(activeSubMenu === menuId ? null : menuId)
   }
 
@@ -40,7 +41,7 @@ const Navbar = () => {
                   item.title === 'Accueil'
                     ? '/'
                     : item.categories.length > 1
-                    ? '#'
+                    ? '#' // Use '#' to indicate a dropdown
                     : item.categories[0].link
                 }
                 className='navbar-link'
@@ -48,7 +49,9 @@ const Navbar = () => {
                   if (item.title === 'Accueil') {
                     closeMobileMenu() // Close menu if Accueil is clicked
                   } else if (item.categories.length > 1) {
-                    toggleSubMenu(item.id) // Toggle submenu if it has multiple categories
+                    toggleSubMenu(item.id) // Toggle the submenu
+                  } else {
+                    closeMobileMenu() // Close menu for other links as well
                   }
                 }}
               >
@@ -62,21 +65,13 @@ const Navbar = () => {
                       <Link
                         to={category.link}
                         className='dropdown-link'
-                        onClick={closeMobileMenu}
+                        onClick={closeMobileMenu} // Close mobile menu on category click
                       >
                         {category.name}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              )}
-              {item.categories.length > 1 && activeSubMenu === item.id && (
-                <button
-                  className='back-button'
-                  onClick={() => setActiveSubMenu(null)}
-                >
-                  Retour
-                </button>
               )}
             </li>
           ))}

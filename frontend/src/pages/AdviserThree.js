@@ -27,7 +27,7 @@ const AdvirserThree = () => {
   return (
     <div className='adiviser-one section-center'>
       <Hero
-        image='https://i.pinimg.com/564x/c6/73/f3/c673f391be93b891c08dfb9d71933001.jpg'
+        image='https://i.pinimg.com/236x/c3/a5/1c/c3a51cff5ac4edad8ce1f4a217f884b8.jpg'
         title='conseils volailles festives'
       />
       <div className='product-tile'>
