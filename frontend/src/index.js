@@ -9,6 +9,8 @@ import AdvirserOne from './pages/AdvirserOne';
 import AnimalOne from './pages/AnimalOne';
 import AnimalTwo from './pages/AnimalTwo';
 import AnimalThree from './pages/AnimalThree';
+import AdvirserTwo from './pages/AdviserTwo';
+import AdvirserThree from './pages/AdviserThree';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
       <Route path='/volailles/poulets-pintades' element={<AnimalTwo />} />
       <Route path='/volailles/volailles-festives' element={<AnimalThree />} />
       <Route path='/conseils/poules-pondeuses' element={<AdvirserOne />} />
+      <Route path='/conseils/poulets-pintades' element={<AdvirserTwo />} />
+      <Route path='/conseils/volailles-festives' element={<AdvirserThree />} />
     </Route>
   )
 )
