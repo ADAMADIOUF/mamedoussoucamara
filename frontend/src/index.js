@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import{createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from "react-router-dom"
+import { Provider } from 'react-redux'
+import { store } from './store'
 import Home from './components/Home';
 import AdvirserOne from './pages/AdvirserOne';
 import AnimalOne from './pages/AnimalOne';
@@ -37,7 +39,9 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 )
 reportWebVitals();

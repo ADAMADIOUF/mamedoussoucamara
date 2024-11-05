@@ -4,6 +4,7 @@ import h2 from '../assets/animalbg.png'
 import { MdOutlineMarkEmailRead } from 'react-icons/md'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import ContactForm from './ContactForm'
 
 const Contact = () => {
   return (
@@ -59,6 +60,7 @@ const Contact = () => {
             </MapContainer>
           </article>
         </div>
+        <ContactForm/>
       </div>
       <div className='header-bg-one'>
         <img src={h1} alt='Header Background 1' />
