@@ -10,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use('/api/form/contact', contactRoute)
 
-
+const __dirname = path.resolve()
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/build')))
   app.get('*', (req, res) =>
