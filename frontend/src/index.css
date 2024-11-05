@@ -1295,3 +1295,43 @@ font-size: 1.5rem;
     font-size: 1.25rem; 
   }
 }
+/* Faq */
+.category {
+  margin-bottom: 2rem;
+}
+
+.category h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.question {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.question header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color:var(--clr-primary-1);
+}
+.question h5{
+  font-size: 1.5rem;
+}
+.question p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1.5rem;
+}

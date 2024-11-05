@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
-
+import h1 from '../assets/headerbg3.png'
+import h2 from '../assets/animalbg.png'
 const Pro = () => {
   return (
     <div className='pro section-center'>
@@ -8,7 +9,7 @@ const Pro = () => {
         image='https://i.pinimg.com/236x/a1/47/da/a147dafa985a0dc65e825f1858e5de89.jpg'
         title="Nos Services d'Élevage de Volaille"
       />
-      <h2>Nos Services d'Élevage de Volaille</h2> 
+      <h2>Nos Services d'Élevage de Volaille</h2>
       <p className='pro-description'>
         Découvrez notre large gamme de services d'élevage de volaille, où
         qualité et bien-être des animaux sont nos priorités.
@@ -70,6 +71,12 @@ const Pro = () => {
             viande de haute qualité, appréciés par les gourmets.
           </p>
         </article>
+      </div>
+      <div className='header-bg-one'>
+        <img src={h1} alt='' />
+      </div>
+      <div className='header-bg-three'>
+        <img src={h2} alt='' />
       </div>
     </div>
   )

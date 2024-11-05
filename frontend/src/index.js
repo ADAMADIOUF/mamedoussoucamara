@@ -14,6 +14,7 @@ import AdvirserThree from './pages/AdviserThree';
 import Seller from './pages/Seller';
 import About from './pages/About';
 import Pro from './pages/Pro';
+import Faq from './pages/Faq';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path='/points-distribution' element={<Seller />} />
       <Route path='/qui-sommes-nous' element={<About />} />
       <Route path='/pro' element={<Pro />} />
+      <Route path='/faq' element={<Faq />} />
     </Route>
   )
 )

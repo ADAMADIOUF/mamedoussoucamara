@@ -66,11 +66,7 @@ const navbarData = [
       { id: nanoid(), name: 'Qui sommes-nous ?', link: '/qui-sommes-nous' },
     ],
   },
-  {
-    id: nanoid(),
-    title: 'Actualités',
-    categories: [{ id: nanoid(), name: 'Actualités', link: '/actualites' }],
-  },
+  
   {
     id: nanoid(),
     title: 'Pro',
