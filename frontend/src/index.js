@@ -15,6 +15,7 @@ import Seller from './pages/Seller';
 import About from './pages/About';
 import Pro from './pages/Pro';
 import Faq from './pages/Faq';
+import Contact from './pages/Contact';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path='/qui-sommes-nous' element={<About />} />
       <Route path='/pro' element={<Pro />} />
       <Route path='/faq' element={<Faq />} />
+      <Route path='/contact' element={<Contact />} />
     </Route>
   )
 )
