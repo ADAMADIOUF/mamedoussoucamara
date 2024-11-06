@@ -5,11 +5,11 @@ const TopNav = () => {
   return (
     <div className='top-nav'>
       <h5>
-      Réservez vos volailles directement sur notre site et
-        récupérez-les dans nos points de collecte : 
+        Réservez vos volailles directement sur notre site et récupérez-les dans
+        nos points de collecte :
       </h5>
 
-      <Link to={'/'}>
+      <Link to={'/points-distribution'}>
         <h5>nos points de collecte</h5>
       </Link>
     </div>

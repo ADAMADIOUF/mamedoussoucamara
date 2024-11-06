@@ -12,14 +12,14 @@ const Header = () => {
     <div className='header'>
       <div className='container-slider'>
         <Swiper
-          modules={[Autoplay]} // Use the imported modules
-          autoplay={{ delay: 3000 }} // Set autoplay delay (optional)
+          modules={[Autoplay]} 
+          autoplay={{ delay: 3000 }} 
           className='mySwiper'
         >
           {dataSlider.map((slide) => (
             <SwiperSlide key={slide.id}>
               <img src={slide.image} alt={slide.text} />
-              <div className='overlay'></div> {/* Overlay div */}
+              <div className='overlay'></div> 
               <h3 className='slide-text'>{slide.text}</h3>
             </SwiperSlide>
           ))}

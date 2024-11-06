@@ -14,7 +14,7 @@ const Destination = () => {
               Sénégal et au-delà. Vous pouvez trouver nos articles de volaille
               de haute qualité à divers endroits
             </p>
-            <Link to={'/'}>
+            <Link to={'/contact'}>
               <button className='btn'>contact</button>
             </Link>
           </article>

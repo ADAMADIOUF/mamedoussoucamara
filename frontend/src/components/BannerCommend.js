@@ -16,7 +16,7 @@ const BannerCommend = () => {
               <h5>commander</h5>
             </article>
           </Link>
-          <Link to={'/'}>
+          <Link to={'/points-distribution'}>
             <article className='last-btn'>
               <span>
                 <FaHome />

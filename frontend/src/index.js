@@ -18,6 +18,8 @@ import About from './pages/About';
 import Pro from './pages/Pro';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
+import SingleProduct from './pages/SingleProduct';
+import SingleBlog from './pages/SingleBlog';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path='/pro' element={<Pro />} />
       <Route path='/faq' element={<Faq />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/product/:id' element={<SingleProduct />} />
+      <Route path='/productTwo/:id' element={<SingleBlog />} />
     </Route>
   )
 )

@@ -13,7 +13,7 @@ const Qualite = () => {
               <img src={image} alt='' />
               <h3>{title}</h3>
               <p>{description}</p>
-              <Link to={'/'}>
+              <Link to={`/product/${product.id}`}>
                 <button>view product</button>
               </Link>
             </div>
