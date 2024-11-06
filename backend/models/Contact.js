@@ -39,13 +39,10 @@ contactSchema.post('save', async function (doc) {
       Phone: ${doc.phone}
       Description: ${doc.description}
       Address: ${doc.address}
-      Total Price: ${doc.totalPrice}
-       Product name: ${doc.productName}
     `,
   }
 
   try {
-    // Call the sendEmail function with emailOptions
     await sendEmail(emailOptions)
     console.log('Notification email sent successfully.')
   } catch (error) {

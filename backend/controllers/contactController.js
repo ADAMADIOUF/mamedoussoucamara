@@ -1,6 +1,5 @@
 import asyncHandler from '../middleware/asyncHandler.js'
 import Contact from '../models/Contact.js'
-
 const contactFormData = asyncHandler(async (req, res) => {
   const {
     firstName,
@@ -8,21 +7,16 @@ const contactFormData = asyncHandler(async (req, res) => {
     phone,
     description,
     address,
-   
   } = req.body
 
   try {
-    // Create a new instance of Contact using the request body
     const contact = new Contact({
       firstName,
       lastName,
       phone,
       description,
       address,
-      
     })
-
-    // Save the contact to the database
     const savedContact = await contact.save()
 
     res.status(201).json({

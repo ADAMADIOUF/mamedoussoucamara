@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import { useSendContactFormMutation } from '../slices/contactApiSlice'
-import { useLocation, useParams } from 'react-router-dom'
 
 const ContactForm = () => {
-  const location = useLocation()
-
-  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     phone: '',
     description: '',
     address: '',
-    
-    
   })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const [sendContactForm, { isLoading, isError }] = useSendContactFormMutation()
@@ -27,9 +21,7 @@ const ContactForm = () => {
         Phone Number: ${formData.phone}
         Address: ${formData.address}
         Description: ${formData.description}`
-
       setIsFormSubmitted(true)
-
       await sendContactForm({
         ...formData,
         message: emailContent,

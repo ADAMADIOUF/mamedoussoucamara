@@ -1,12 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import h1 from '../assets/headerbg3.png'
 import h2 from '../assets/animalbg.png'
 import { MdOutlineMarkEmailRead } from 'react-icons/md'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import ContactForm from './ContactForm'
-
+import { useSendContactFormMutation } from '../slices/contactApiSlice'
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    description: '',
+    address: '',
+  })
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [sendContactForm, { isLoading, isError }] = useSendContactFormMutation()
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      let emailContent = `
+        First Name: ${formData.firstName}
+        Last Name: ${formData.lastName}
+        Phone Number: ${formData.phone}
+        Address: ${formData.address}
+        Description: ${formData.description}`
+      setIsFormSubmitted(true)
+      await sendContactForm({
+        ...formData,
+        message: emailContent,
+      })
+
+      setFormData({
+        firstName: '',
+        lastName: '',
+        subject: '',
+        phone: '',
+        description: '',
+        address: '',
+      })
+    } catch (error) {
+      console.error('An error occurred while submitting the form:', error)
+    }
+  }
+
   return (
     <div className='contact section-center'>
       <div className='contact-details'>
@@ -21,28 +58,88 @@ const Contact = () => {
               </span>
               <h3>Par e-mail</h3>
             </div>
-            <form className='contact-form'>
-              <div>
-                <input type='text' placeholder='Nom *' />
+            {!isFormSubmitted && (
+              <form onSubmit={handleSubmit} className='contact-form'>
+                <div>
+                  <input
+                    placeholder='Nom *'
+                    type='text'
+                    id='firstName'
+                    value={formData.firstName}
+                    onChange={(e) =>
+                      setFormData({ ...formData, firstName: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    placeholder='Prenom *'
+                    type='text'
+                    id='lastName'
+                    value={formData.lastName}
+                    onChange={(e) =>
+                      setFormData({ ...formData, lastName: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div>
+                  <input type='email' placeholder='Adresse mail *' />
+                </div>
+                <div>
+                  <input
+                    placeholder='Téléphone *'
+                    type='tel'
+                    id='phoneNumber'
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type='text'
+                    placeholder='Adresse *'
+                    value={formData.address}
+                    onChange={(e) =>
+                      setFormData({ ...formData, address: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div>
+                  <h3>Votre message</h3>
+                  <textarea
+                    placeholder='Écrivez votre message ici'
+                    value={formData.description}
+                    onChange={(e) =>
+                      setFormData({ ...formData, description: e.target.value })
+                    }
+                  ></textarea>
+                </div>
+                <button
+                  type='submit'
+                  className='btn-submit'
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Sending...' : 'Send Message'}
+                </button>
+                {isError && (
+                  <div className='error-message'>
+                    An error occurred while submitting the form. Please try
+                    again.
+                  </div>
+                )}
+              </form>
+            )}
+            {isFormSubmitted && !isError && (
+              <div className='success-message'>
+                Message envoyé avec succès ! Nous vous répondrons bientôt.
               </div>
-              <div>
-                <input type='text' placeholder='Prenom *' />
-              </div>
-              <div>
-                <input type='email' placeholder='Adresse mail *' />
-              </div>
-              <div>
-                <input type='tel' placeholder='Téléphone *' />
-              </div>
-              <div>
-                <input type='text' placeholder='Adresse *' />
-              </div>
-              <div>
-                <h3>Votre message</h3>
-                <textarea placeholder='Écrivez votre message ici'></textarea>
-              </div>
-              <button type='submit'>Validez</button>
-            </form>
+            )}
           </article>
           <article className='map-contact'>
             <MapContainer
@@ -60,7 +157,6 @@ const Contact = () => {
             </MapContainer>
           </article>
         </div>
-       
       </div>
       <div className='header-bg-one'>
         <img src={h1} alt='Header Background 1' />
