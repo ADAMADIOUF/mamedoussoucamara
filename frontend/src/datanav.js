@@ -82,11 +82,7 @@ const navbarData = [
     title: 'Contact',
     categories: [{ id: nanoid(), name: 'Contact', link: '/contact' }],
   },
-  {
-    id: nanoid(),
-    title: 'Commander',
-    categories: [{ id: nanoid(), name: 'Commander', link: '/commander' }],
-  },
+  
 ]
 
 export default navbarData

@@ -238,6 +238,7 @@ p {
   background-color: var(--clr-primary-1);
   color: var(--clr-white);
   z-index: 999;
+ 
 }
 
 .top-nav h5{
@@ -257,7 +258,7 @@ p {
   justify-content: space-between;
   align-items: center;
   position: fixed; 
-  top:90px; 
+  top:110px; 
   width: 100%; 
   z-index: 998; 
   box-shadow: var(--light-shadow);

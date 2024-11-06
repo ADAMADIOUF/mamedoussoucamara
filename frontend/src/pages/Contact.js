@@ -60,7 +60,7 @@ const Contact = () => {
             </MapContainer>
           </article>
         </div>
-        <ContactForm/>
+       
       </div>
       <div className='header-bg-one'>
         <img src={h1} alt='Header Background 1' />
