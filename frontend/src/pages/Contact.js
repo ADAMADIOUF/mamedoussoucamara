@@ -161,9 +161,7 @@ const Contact = () => {
       <div className='header-bg-one'>
         <img src={h1} alt='Header Background 1' />
       </div>
-      <div className='header-bg-three'>
-        <img src={h2} alt='Header Background 2' />
-      </div>
+     
     </div>
   )
 }
