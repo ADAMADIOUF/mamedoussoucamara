@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           {navbarData.map((item) => (
-            <li key={item.id} className='navbar-item'>
+            <li key={item.id} className='navbar-item no-wrap'>
               <Link
                 to={
                   item.title === 'Accueil'

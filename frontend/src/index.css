@@ -250,6 +250,9 @@ p {
   cursor: pointer;
 }
 /* Navbar */
+.no-wrap {
+  white-space: nowrap;
+}
 .navbar {
   background-color: var(--clr-white);
   padding: 1rem;
