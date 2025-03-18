@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import navbarData from '../datanav'
 import logo from '../assets/logo.png'
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSubMenu, setActiveSubMenu] = useState(null)
@@ -92,6 +91,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      
       </div>
     </nav>
   )

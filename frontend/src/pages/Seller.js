@@ -62,7 +62,7 @@ const Seller = () => {
               <Popup>
                 {location.name} <br />
                 <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>{' '}
-                {/* Clickable phone number */}
+                
               </Popup>
             </Marker>
           ))}

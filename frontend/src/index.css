@@ -2173,3 +2173,25 @@ font-size: 1.5rem;
 .product-list {
   margin-top: 20px;
 }
+#google_translate_element {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  #google_translate_element {
+    top: 20px;
+    right: 10px;
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  #google_translate_element {
+    top: 15px;
+    right: 10px;
+    font-size: 10px; /* Further reduce font size for very small screens */
+  }
+}
