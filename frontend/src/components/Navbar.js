@@ -2,31 +2,46 @@ import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import navbarData from '../datanav'
-import logo from "../assets/logo.png"
+import logo from '../assets/logo.png'
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSubMenu, setActiveSubMenu] = useState(null)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-    setActiveSubMenu(null) 
+    setActiveSubMenu(null)
   }
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
-    setActiveSubMenu(null) 
+    setActiveSubMenu(null)
   }
 
   const toggleSubMenu = (menuId) => {
-    
     setActiveSubMenu(activeSubMenu === menuId ? null : menuId)
+  }
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scroll effect
+    })
   }
 
   return (
     <nav className='navbar'>
       <div className='navbar-container'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-       <img src={logo} alt="" className="logo" />
+        <Link
+          to='/'
+          className='navbar-logo'
+          onClick={() => {
+            closeMobileMenu()
+            scrollToTop()
+          }}
+        >
+          <img src={logo} alt='Logo' className='logo' />
         </Link>
 
         <div className='mobile-menu-icon' onClick={toggleMobileMenu}>
@@ -48,6 +63,7 @@ const Navbar = () => {
                 onClick={() => {
                   if (item.title === 'Accueil') {
                     closeMobileMenu() // Close menu if Accueil is clicked
+                    scrollToTop() // Scroll to top for Accueil
                   } else if (item.categories.length > 1) {
                     toggleSubMenu(item.id) // Toggle the submenu
                   } else {
