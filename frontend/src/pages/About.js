@@ -4,7 +4,7 @@ import videoFile from '../assets/mamedou1.mp4'
 import h1 from '../assets/headerbg3.png'
 import h2 from '../assets/animalbg.png'
 const About = () => {
-  const title = 'Bienvenue G I E Mamedoussou Camara' // Define the title variable
+  const title = 'Bienvenue G I E Mamedoussou Camara' 
 
   return (
     <div className='about'>
@@ -16,7 +16,7 @@ const About = () => {
         <div className='about-container'>
           <article className='about-img'>
             <img
-              src='https://scontent-msp1-1.xx.fbcdn.net/v/t39.30808-6/449715060_1609513749898715_22949665804406819_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=EhXo-4SueGEQ7kNvgE2oiOQ&_nc_zt=23&_nc_ht=scontent-msp1-1.xx&_nc_gid=An69ILXKIi-o2s7ukxhwBU_&oh=00_AYAgvLLU0HVk_Ra4vv6QKSWjerqyscRY3NDHqz1hgehwhw&oe=672EDCEB'
+              src='https://i.pinimg.com/736x/26/60/44/2660442bf4a6b493c30c2c2fb0691790.jpg'
               alt='Un poulet élevé de manière écologique dans un environnement familial'
             />
           </article>

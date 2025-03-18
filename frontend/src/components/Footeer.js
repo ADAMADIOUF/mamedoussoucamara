@@ -1,60 +1,88 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
 
-const Footeer = () => {
+const Footer = () => {
   return (
-    <div className='footer'>
-      <div className='footer-overlay'></div>
-      <div className='footer-center section-center footer-content'>
-        <div className='footer-section'>
-          <h4>Contactez-Nous</h4>
-          <p>Senegal,Dakar, Tivaoune Peulh</p>
-          <p>Email : mamebiramediouf@gmail.com</p>
-          <p>Téléphone : (+221) 77-706-25-56</p>
+    <footer className='footer'>
+      <div className='footer-container'>
+        <div className='footer-info'>
+          <h3>Heures d'ouverture</h3>
+          <ul>
+            <li>
+              <strong>En semaine :</strong> 08:00am - 08:00pm
+            </li>
+            <li>
+              <strong>Week-ends :</strong> 10:00am - 06:00pm
+            </li>
+          </ul>
         </div>
 
-      
-        <div className='footer-section'>
-          <h4>Liens Rapides</h4>
-          <Link to='/'>Accueil</Link>
-          <Link to='/about'>À Propos</Link>
-          <Link to='/services'>Services</Link>
-          <Link to='/contact'>Contact</Link>
+        <div className='footer-social'>
+          <h3>Réseaux sociaux</h3>
+
+          <ul>
+            <li>
+              <a
+                href='https://facebook.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://twitter.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://instagram.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Instagram
+              </a>
+            </li>
+          </ul>
         </div>
 
-       
-        <div className='footer-section'>
-          <h4>Suivez-Nous</h4>
-          <div className='footer-social-icons'>
-            <a href='#' aria-label='Facebook'>
-              <span>
-               <FaFacebook/>
-              </span>
-            </a>
-            <a href='#' aria-label='Twitter'>
-             <span>
-              <FaTwitter/>
-             </span>
-            </a>
-            <a href='#' aria-label='Instagram'>
-              <span>
-               <FaInstagram/>
-              </span>
-            </a>
-          </div>
+        <div className='footer-contacts'>
+          <h3>Contacts</h3>
+          <ul>
+            <li>Senegal,Tivaoune Peulh,Cite Apix</li>
+            <li>Senegal,Fatick,Noduck @</li>
+            <li>+221 77 706 25 56</li>
+            <li>+221 70 679 10 05</li>
+            <li>
+              <a href='mailto:info@demolink.org'>giemamedoussoucamara@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className='footer-newsletter'>
+          <h3>Newsletter</h3>
+          <p>
+            Abonnez-vous à notre newsletter pour recevoir des nouvelles
+            hebdomadaires, des mises à jour, des offres spéciales et des
+            réductions exclusives.
+          </p>
+          <form>
+            <input type='email' placeholder='Entrez votre e-mail' required />
+            <button type='submit'>S'abonner</button>
+          </form>
         </div>
       </div>
 
-   
-      <div className='footer-bottom'>
-        <p>
-          &copy; {new Date().getFullYear()} Doussou Inc. Tous droits réservés. |{' '}
-          <Link to='/privacy'>Politique de Confidentialité</Link>
-        </p>
+      {/* Section "G I E MAME DOUSSOU" */}
+      <div className='giemame-doussou'>
+        <p>G I E MAME DOUSSOU</p>
       </div>
-    </div>
+    </footer>
   )
 }
 
-export default Footeer
+export default Footer

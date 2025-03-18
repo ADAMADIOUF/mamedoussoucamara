@@ -8,12 +8,12 @@ import ScrollToTop from './components/ScrollToTop'
 const App = () => {
   return (
     <div>
-      <ScrollToTop/>
       <TopNav />
       <Navbar />
 
       <Outlet />
       <ClikButtonTop />
+      <ScrollToTop />
       <Footeer />
     </div>
   )

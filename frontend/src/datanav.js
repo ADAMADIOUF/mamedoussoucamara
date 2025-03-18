@@ -66,12 +66,6 @@ const navbarData = [
       { id: nanoid(), name: 'Qui sommes-nous ?', link: '/qui-sommes-nous' },
     ],
   },
-  
-  {
-    id: nanoid(),
-    title: 'Pro',
-    categories: [{ id: nanoid(), name: 'Pro', link: '/pro' }],
-  },
   {
     id: nanoid(),
     title: 'FAQ',
@@ -79,10 +73,14 @@ const navbarData = [
   },
   {
     id: nanoid(),
+    title: 'Boutique',
+    categories: [{ id: nanoid(), name: 'Boutique', link: '/shop' }],
+  },
+  {
+    id: nanoid(),
     title: 'Contact',
     categories: [{ id: nanoid(), name: 'Contact', link: '/contact' }],
   },
-  
 ]
 
 export default navbarData

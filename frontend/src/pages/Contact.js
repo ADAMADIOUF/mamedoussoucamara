@@ -57,6 +57,7 @@ const Contact = () => {
                 <MdOutlineMarkEmailRead />
               </span>
               <h3>Par e-mail</h3>
+              <span>giemamedoussoucamara@gmail.com</span>
             </div>
             {!isFormSubmitted && (
               <form onSubmit={handleSubmit} className='contact-form'>
@@ -161,7 +162,6 @@ const Contact = () => {
       <div className='header-bg-one'>
         <img src={h1} alt='Header Background 1' />
       </div>
-     
     </div>
   )
 }

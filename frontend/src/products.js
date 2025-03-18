@@ -3,7 +3,7 @@ const products = [
   {
     id: 1,
     image:
-      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+      'https://i.pinimg.com/736x/c6/44/ae/c644ae46c9b73d6b8d5fe4828e5e5a0f.jpg',
     title: 'Poulet Fermier de Qualité',
     description:
       'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',
@@ -63,7 +63,7 @@ const products = [
   {
     id: 6,
     image:
-      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+      'https://i.pinimg.com/736x/12/1b/bb/121bbb722b0e6db55863cca358dec356.jpg',
     title: 'Poulet Fermier de Qualité',
     description:
       'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',
@@ -75,7 +75,7 @@ const products = [
   {
     id: 7,
     image:
-      'https://i.pinimg.com/236x/75/d6/46/75d646e6ac7c8fe6402e1a4b53e421c9.jpg',
+      'https://i.pinimg.com/736x/df/d8/a6/dfd8a6f0cef1d364d8a90019f675482a.jpg',
     title: 'Poulet Fermier de Qualité',
     description:
       'Poulet fermier élevé en plein air, offrant un goût authentique et une tendreté incomparable.',

@@ -15,11 +15,11 @@ import AdvirserTwo from './pages/AdviserTwo';
 import AdvirserThree from './pages/AdviserThree';
 import Seller from './pages/Seller';
 import About from './pages/About';
-import Pro from './pages/Pro';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
 import SingleProduct from './pages/SingleProduct';
 import SingleBlog from './pages/SingleBlog';
+import Shop from './pages/Shop';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -32,8 +32,9 @@ const router = createBrowserRouter(
       <Route path='/conseils/volailles-festives' element={<AdvirserThree />} />
       <Route path='/points-distribution' element={<Seller />} />
       <Route path='/qui-sommes-nous' element={<About />} />
-      <Route path='/pro' element={<Pro />} />
+      
       <Route path='/faq' element={<Faq />} />
+      <Route path='/shop' element={<Shop />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/product/:id' element={<SingleProduct />} />
       <Route path='/productTwo/:id' element={<SingleBlog />} />

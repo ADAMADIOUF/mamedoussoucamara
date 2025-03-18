@@ -1,23 +1,33 @@
 import React from 'react'
-import Header from './Header'
-import Categories from './Categories'
-import Welcome from './Welcome'
-import BannerCommend from './BannerCommend'
-import Qualite from './Qualite'
-import Destination from './Destination'
-import Blog from './Blog'
+import HeaderSlider from './HeaderSlider'
+import FirstBanner from './FirstBanner'
+import BannerNumber from './BannerNumber'
+import BannerFixed from './BannerFixed'
+import Gallery from './Gallery'
 
-
+import Testimonial from "./Testimonial"
+import ProgressBar from './ProgressBar'
+import History from './History'
+import BlogHome from './BlogHome'
+import Map from './Map'
 const Home = () => {
   return (
     <div>
-    <Header/>
-     <Categories/>
-     <Welcome/>
-     <BannerCommend/>
-     <Qualite/>
-     <Destination/>
-     <Blog/>
+    <HeaderSlider/>
+    <FirstBanner/>
+    <BannerNumber/>
+    <BannerFixed/>
+    <Gallery/>
+    <Testimonial/>
+    <ProgressBar/>
+    <History/>
+    <BlogHome/>
+    <Map/>
+    
+    
+    
+   
+     
     </div>
   )
 }
